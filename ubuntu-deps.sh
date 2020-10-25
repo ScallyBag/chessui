@@ -1,1 +1,1 @@
-sudo apt-get install virtualenv python2.7 python2.7-dev libsqlite3-dev
+sudo apt install virtualenv python3 python3-dev libsqlite3-dev
