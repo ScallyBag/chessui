@@ -13,6 +13,7 @@ if [ ! -d chess_db ]; then
         git clone https://github.com/sshivaji/chess_db
 fi
 cd chess_db;git pull; cd ..
+cp -r Makefiles/Makefile-chess_db-parser Makefile
 cd chess_db/parser;make -j5 build ARCH=armv7; cd ../..
 cp chess_db/parser/parser ./external
 cp chess_db/parser/chess_db.py ./external
@@ -22,6 +23,7 @@ if [ ! -d pgnextractor ]; then
         git clone https://github.com/sshivaji/pgnextractor
 fi
 cd pgnextractor;git pull; cd ..
+cp -r Makefiles/Makefile-pgnextractor-parser Makefile
 cd pgnextractor/parser;make -j5 build ARCH=armv7; cd ../..
 cp pgnextractor/parser/pgnextractor ./external
 
@@ -30,6 +32,7 @@ if [ ! -d ctgreader ]; then
 	git clone https://github.com/sshivaji/ctgreader
 fi
 cd ctgreader; git pull; cd ..
+cp -r Makefile/Makefile-ctgreader Makefile
 cd ctgreader; make; cd ..
 cp ctgreader/ctg_reader ./external
 
